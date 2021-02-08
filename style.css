@@ -34,3 +34,21 @@ body {
 .cursor {
     cursor: pointer;
 }
+
+#ingredients p {
+    list-style: none;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    color: #6C6C6C;
+}
+
+#ingredients p::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 12px);
+    left: 0;
+    width: 24px;
+    height: 24px;
+    background: url(images/checkmark.png) no-repeat center center / contain;
+}

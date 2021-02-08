@@ -58,6 +58,34 @@ const displayMealsDetails = details => {
                 <div class="card-body bg-light">
                     <h1 class="mb-4">${details.strMeal}</h1>
                     <h5 class="card-text mb-4">Ingredients</h5>
+                    <div id="ingredients">
+                   </div>
+                </div>
+            </div>
+        </div>
+        `;
+    const mealIngredients = document.getElementById('ingredients');
+    for (let i = 1; i <= 20; i++) {
+        if (details['strIngredient' + i]) {
+            const ingredient = document.createElement('p');
+            ingredient.innerText = `${details['strMeasure' + i]} ${details['strIngredient' + i]}`;
+            mealIngredients.appendChild(ingredient);
+        }
+    }
+}
+
+
+/* 
+// Function For Display Details Of Meals
+const displayMealsDetails = details => {
+    const mealsDetails = document.getElementById('meals-details');
+    mealsDetails.innerHTML = `
+        <div class="d-flex justify-content-center mb-5">
+            <div class="card w-75 border-0 rounded-3 meal-details">
+                <img src="${details.strMealThumb}" class="card-img-top">
+                <div class="card-body bg-light">
+                    <h1 class="mb-4">${details.strMeal}</h1>
+                    <h5 class="card-text mb-4">Ingredients</h5>
                     <p><img src="images/checkmark.png">${details.strMeasure1} ${details.strIngredient1}</p>
                     <p><img src="images/checkmark.png">${details.strMeasure2} ${details.strIngredient2}</p>
                     <p><img src="images/checkmark.png">${details.strMeasure3} ${details.strIngredient3}</p>
@@ -72,4 +100,4 @@ const displayMealsDetails = details => {
             </div>
         </div>
         `;
-}
+} */
