@@ -13,18 +13,6 @@ body {
     object-fit: cover;
 }
 
-.meal-details p {
-    font-weight: normal !important;
-    color: #6C6C6C !important;
-}
-
-.meal-details p img {
-    width: 24px;
-    height: 24px;
-    background-color: white;
-    margin-right: 10px;
-}
-
 #nothing-found {
     font-size: 22px;
     font-weight: 700;
@@ -36,6 +24,7 @@ body {
 }
 
 #ingredients p {
+    font-weight: normal;
     list-style: none;
     position: relative;
     padding-left: 30px;
