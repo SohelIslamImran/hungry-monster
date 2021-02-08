@@ -26,7 +26,7 @@ const displayMeals = mealsData => {
             const mealDiv = document.createElement('div');
             mealDiv.className = 'col p-3';
             const mealInfo = `
-                <div onclick="getDetails(${meal.idMeal})" class="card border-0 rounded-3 cursor" style="width: 18rem;">
+                <div onclick="getDetails(${meal.idMeal})" class="card border-0 rounded-3 shadow cursor" style="width: 18rem;">
                         <img src="${meal.strMealThumb}" class="card-img-top">
                     <div class="card-body bg-light">
                         <h5 class="card-title text-center">${meal.strMeal}</h5>
@@ -53,7 +53,7 @@ const displayMealsDetails = details => {
     const mealsDetails = document.getElementById('meals-details');
     mealsDetails.innerHTML = `
         <div class="d-flex justify-content-center mb-5">
-            <div class="card w-75 border-0 rounded-3 meal-details">
+            <div class="card w-75 border-0 rounded-3 shadow meal-details">
                 <img src="${details.strMealThumb}" class="card-img-top">
                 <div class="card-body bg-light">
                     <h1 class="mb-4">${details.strMeal}</h1>
