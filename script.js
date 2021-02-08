@@ -65,6 +65,7 @@ const displayMealsDetails = details => {
         </div>
         `;
     const mealIngredients = document.getElementById('ingredients');
+    // For This Logic I Had To Use For Loop Instead ForEach Because API Gives Random Amount Of Ingredients, So I Needed Index Number.
     for (let i = 1; i <= 20; i++) {
         if (details['strIngredient' + i]) {
             const ingredient = document.createElement('p');
@@ -73,31 +74,3 @@ const displayMealsDetails = details => {
         }
     }
 }
-
-
-/* 
-// Function For Display Details Of Meals
-const displayMealsDetails = details => {
-    const mealsDetails = document.getElementById('meals-details');
-    mealsDetails.innerHTML = `
-        <div class="d-flex justify-content-center mb-5">
-            <div class="card w-75 border-0 rounded-3 meal-details">
-                <img src="${details.strMealThumb}" class="card-img-top">
-                <div class="card-body bg-light">
-                    <h1 class="mb-4">${details.strMeal}</h1>
-                    <h5 class="card-text mb-4">Ingredients</h5>
-                    <p><img src="images/checkmark.png">${details.strMeasure1} ${details.strIngredient1}</p>
-                    <p><img src="images/checkmark.png">${details.strMeasure2} ${details.strIngredient2}</p>
-                    <p><img src="images/checkmark.png">${details.strMeasure3} ${details.strIngredient3}</p>
-                    <p><img src="images/checkmark.png">${details.strMeasure4} ${details.strIngredient4}</p>
-                    <p><img src="images/checkmark.png">${details.strMeasure5} ${details.strIngredient5}</p>
-                    <p><img src="images/checkmark.png">${details.strMeasure6} ${details.strIngredient6}</p>
-                    <p><img src="images/checkmark.png">${details.strMeasure7} ${details.strIngredient7}</p>
-                    <p><img src="images/checkmark.png">${details.strMeasure8} ${details.strIngredient8}</p>
-                    <p><img src="images/checkmark.png">${details.strMeasure9} ${details.strIngredient9}</p>
-                    <p><img src="images/checkmark.png">${details.strMeasure10} ${details.strIngredient10}</p>
-                </div>
-            </div>
-        </div>
-        `;
-} */
