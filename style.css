@@ -30,3 +30,7 @@ body {
     font-weight: 700;
     color: #dc3545;
 }
+
+.cursor {
+    cursor: pointer;
+}

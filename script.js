@@ -26,7 +26,7 @@ const displayMeals = mealsData => {
             const mealDiv = document.createElement('div');
             mealDiv.className = 'col p-3';
             const mealInfo = `
-                <div onclick="getDetails(${meal.idMeal})" class="card border-0 rounded-3" style="width: 18rem;">
+                <div onclick="getDetails(${meal.idMeal})" class="card border-0 rounded-3 cursor" style="width: 18rem;">
                         <img src="${meal.strMealThumb}" class="card-img-top">
                     <div class="card-body bg-light">
                         <h5 class="card-title text-center">${meal.strMeal}</h5>
